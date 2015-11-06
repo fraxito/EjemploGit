@@ -10,23 +10,7 @@ public class Ejercicio1 extends acm.program.GraphicsProgram{
 
 
 	public void run () {
-		//cambio el tamaño de la ventana
-		setSize(800, 600);
-		//llamo al método que dibuja la pirámide
-		pintaPiramide();
-	}
-	
-	public void pintaPiramide(){
-		
+		GLabel etiqueta = new GLabel("Hola Git!!");
+		add (etiqueta, 120,130);
 	}
 }
-
-
-
-
-
-
-
-
-
-
