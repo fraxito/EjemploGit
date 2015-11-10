@@ -20,14 +20,18 @@ public class Ejercicio1 extends acm.program.GraphicsProgram{
 		int numLadrillosBase = 14;
 		int anchoLadrillo = 30;
 		int altoLadrillo = 12;
-		
-		//querido yo del martes:
-		//te falta lo mas facil que es girar la piramide
-		// att: tu yo del viernes
+		int ancho = getWidth();
+		int alto = getHeight();
+		int basePiramide = numLadrillosBase * anchoLadrillo;
+		//terminado y probado con varios tamaños de ladrillo
 		for (int j=0; j< numLadrillosBase; j++){
 			for (int i=0; i< numLadrillosBase-j; i++){
 				GRect ladrillo = new GRect(anchoLadrillo, altoLadrillo);
-				add(ladrillo,anchoLadrillo*j/2 + anchoLadrillo * i, altoLadrillo*j);
+				
+				add(ladrillo,
+						ancho/2 -basePiramide/2 + anchoLadrillo*j/2 + anchoLadrillo * i,
+						alto - altoLadrillo - altoLadrillo*j);
+				
 				pause(20);
 			}
 		}
